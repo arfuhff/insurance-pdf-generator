@@ -34,9 +34,9 @@ app.post("/generate", (req, res) => {
   doc.fontSize(12).text("MANAKALAPADY, KONATHKUNNU", { align: "center" });
   doc.text("Email: lathambikanvb@gmail.com | Phone: +91 7034164276", { align: "center" });
   doc.moveDown();
-  doc.text(`DATE: ${date}`);
+  doc.text(`DATE: ${date}`,{ align:"right"});
   doc.moveDown();
-  doc.font("Helvetica-Bold").text(`${name}`,{ align:"right"});
+  doc.font("Helvetica-Bold").text(`${name}`);
   doc.moveDown();
 
   doc.font("Helvetica-Bold").text("Vehicle Insurance Details", { align: "center" });
