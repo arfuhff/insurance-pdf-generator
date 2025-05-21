@@ -35,7 +35,7 @@ app.post("/generate", (req, res) => {
   doc.text("Email: lathambikanvb@gmail.com | Phone: +91 7034164276", { align: "center" });
   doc.moveDown();
   doc.text(`DATE: ${date}`);
-  doc.text(`${name}`);
+  doc.font("Helvetica-Bold").text(`${name}`);
   doc.moveDown();
 
   doc.font("Helvetica-Bold").text("Vehicle Insurance Details", { align: "center" });
