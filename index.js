@@ -39,7 +39,7 @@ app.post("/generate", (req, res) => {
   doc.font("Helvetica-Bold").text(`${name}`);
   doc.moveDown();
 
- const headingText = heading === "bill" ? "INSURANCE BILL" : "INSURANCE RENEWAL QUOTATION";
+ const headingText = heading === "bill" ? "RECEIPT" : "INSURANCE RENEWAL QUOTATION";
 doc.font("Helvetica-Bold").text(headingText, { align: "center" });
 
   doc.moveDown();
