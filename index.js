@@ -39,7 +39,7 @@ app.post("/generate", (req, res) => {
   doc.font("Helvetica-Bold").text(`${name}`);
   doc.moveDown();
 
-  doc.font("Helvetica-Bold").text("Vehicle Insurance Details", { align: "center" });
+    doc.font("Helvetica-Bold").text("INSURANCE RENEWAL QOTATION", { align: "center" });
   doc.moveDown();
 
   const tableTop = doc.y;
