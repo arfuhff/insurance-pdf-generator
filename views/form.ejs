@@ -50,6 +50,13 @@
   <h2>Insurance Bill Form</h2>
 
   <form method="POST" action="/generate">
+
+    <label>PDF Heading: </label>
+<select name="heading" required>
+  <option value="quotation">INSURANCE RENEWAL QOTATION</option>
+  <option value="bill">INSURANCE BILL</option>
+</select><br><br>
+
     <label>Trust/Client Name:</label>
     <input name="name" required />
 
