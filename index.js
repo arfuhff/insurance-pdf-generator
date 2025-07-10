@@ -23,7 +23,7 @@ app.post("/form", (req, res) => {
 });
 
 app.post("/generate", (req, res) => {
-  const { name, date, vehicles } = req.body;
+  const { name, date, vehicles,heading } = req.body;
 
   const doc = new PDFDocument();
   res.setHeader("Content-disposition", "inline; filename=insurance-bill.pdf");
@@ -39,7 +39,9 @@ app.post("/generate", (req, res) => {
   doc.font("Helvetica-Bold").text(`${name}`);
   doc.moveDown();
 
-    doc.font("Helvetica-Bold").text("INSURANCE RENEWAL QOTATION", { align: "center" });
+ const headingText = heading === "bill" ? "INSURANCE BILL" : "INSURANCE RENEWAL QUOTATION";
+doc.font("Helvetica-Bold").text(headingText, { align: "center" });
+
   doc.moveDown();
 
   const tableTop = doc.y;
